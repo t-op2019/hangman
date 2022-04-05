@@ -99,7 +99,7 @@
 		4F37868827F553B00015806A /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				4FF8303727FC8C8A003E729E /* data */,
+				4F65801727FCAE39001B041D /* data */,
 				4F37868A27F553C60015806A /* fonts */,
 				4F37868927F553B90015806A /* images */,
 			);
@@ -120,12 +120,11 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		4FF8303727FC8C8A003E729E /* data */ = {
+		4F65801727FCAE39001B041D /* data */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = data;
-			path = "dât";
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
