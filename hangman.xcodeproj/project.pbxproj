@@ -12,6 +12,7 @@
 		4F37868127F544630015806A /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F37868027F544630015806A /* SDL2_image.framework */; };
 		4F37868527F546F30015806A /* SDL_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F37868427F546F30015806A /* SDL_Utils.cpp */; };
 		4F37868727F54F760015806A /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F37868627F54F760015806A /* SDL2_ttf.framework */; };
+		4FF3863A27FDCDF200FB329B /* background_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3863927FDCDF200FB329B /* background_functions.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		4F37868327F545B80015806A /* SDL_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_Utils.h; sourceTree = "<group>"; };
 		4F37868427F546F30015806A /* SDL_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SDL_Utils.cpp; sourceTree = "<group>"; };
 		4F37868627F54F760015806A /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		4FF3863827FDCCE400FB329B /* background_functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = background_functions.h; sourceTree = "<group>"; };
+		4FF3863927FDCDF200FB329B /* background_functions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = background_functions.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 			children = (
 				4F37868327F545B80015806A /* SDL_Utils.h */,
 				4F37868427F546F30015806A /* SDL_Utils.cpp */,
+				4FF3863827FDCCE400FB329B /* background_functions.h */,
+				4FF3863927FDCDF200FB329B /* background_functions.cpp */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F37867727F543F70015806A /* main.cpp in Sources */,
+				4FF3863A27FDCDF200FB329B /* background_functions.cpp in Sources */,
 				4F37868527F546F30015806A /* SDL_Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

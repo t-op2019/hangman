@@ -57,6 +57,19 @@ void renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y, i
     SDL_RenderCopy(renderer, texture, NULL, &destinationRec);
 }
 
+// render a clickable button
+SDL_Rect renderButton(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y, int w, int h) {
+    SDL_Rect destinationRec;
+    destinationRec.x = x;
+    destinationRec.y = y;
+    destinationRec.w = w;
+    destinationRec.h = h;
+    
+    SDL_RenderCopy(renderer, texture, NULL, &destinationRec);
+    
+    return destinationRec;
+}
+
 // ***********************************************************
 
 
@@ -118,23 +131,21 @@ string interpretKey(SDL_KeyboardEvent* key) {
 // render text and input
 // ***********************************************************
 
-void renderText(int fontSize, const char* input, SDL_Renderer* renderer, int x, int y, int w, int h) {
+void renderText(int fontSize, const char* input, SDL_Renderer* renderer, int x, int y) {
     if (TTF_Init() == -1) {
         cout << "TTF_Init: %s\n" << " " << TTF_GetError();
         exit(2);
     }
-    const char* fontPath = "assets/fonts/";
-    const char* bridge = "BRIDGE.TTF";
     
     // font color
     SDL_Color white = {255, 255, 255};
     TTF_Font* Bridge;
-    Bridge = TTF_OpenFont(*fontPath + bridge, fontSize);
+    Bridge = TTF_OpenFont("assets/fonts/BRIDGE.TTF", fontSize);
     
     // text surface
     SDL_Surface* textSurface = TTF_RenderText_Solid(Bridge, input, white);
     SDL_Texture* message = SDL_CreateTextureFromSurface(renderer, textSurface);
-    renderTexture(message, renderer, x, y, w, h);
+    renderTexture(message, renderer, x, y);
 }
 
 // ***********************************************************

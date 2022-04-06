@@ -45,6 +45,9 @@ void renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y);
 // render texture at coordinate (x,y) and width, height of w and h
 void renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y, int w, int h);
 
+// render a clickable button
+SDL_Rect renderButton(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y, int w, int h);
+
 // ***********************************************************
 
 
@@ -52,7 +55,7 @@ void renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, int x, int y, i
 // render text and input
 // ***********************************************************
 
-void renderText();
+void renderText(int fontSize, const char* input, SDL_Renderer* renderer, int x, int y);
 
 // ***********************************************************
 
