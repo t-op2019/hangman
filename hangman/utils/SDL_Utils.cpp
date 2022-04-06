@@ -118,12 +118,23 @@ string interpretKey(SDL_KeyboardEvent* key) {
 // render text and input
 // ***********************************************************
 
-void renderText(int fontSize, string input) {
-    const string fontPath = "assets/fonts/";
+void renderText(int fontSize, const char* input, SDL_Renderer* renderer, int x, int y, int w, int h) {
+    if (TTF_Init() == -1) {
+        cout << "TTF_Init: %s\n" << " " << TTF_GetError();
+        exit(2);
+    }
+    const char* fontPath = "hangman/assets/fonts/";
+    const char* bridge = "BRIDGE.TTF";
     
     // font color
     SDL_Color white = {255, 255, 255};
-    TTF_Font* Bridge = TTF_OpenFont(fontPath + "BRIDGE.TTF", fontSize);
+    TTF_Font* Bridge;
+    Bridge = TTF_OpenFont(*fontPath + bridge, fontSize);
+    
+    // text surface
+    SDL_Surface* textSurface = TTF_RenderText_Solid(Bridge, input, white);
+    SDL_Texture* message = SDL_CreateTextureFromSurface(renderer, textSurface);
+    renderTexture(message, renderer, x, y, w, h);
 }
 
 // ***********************************************************
