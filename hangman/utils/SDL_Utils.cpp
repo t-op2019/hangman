@@ -123,7 +123,7 @@ void renderText(int fontSize, const char* input, SDL_Renderer* renderer, int x, 
         cout << "TTF_Init: %s\n" << " " << TTF_GetError();
         exit(2);
     }
-    const char* fontPath = "hangman/assets/fonts/";
+    const char* fontPath = "assets/fonts/";
     const char* bridge = "BRIDGE.TTF";
     
     // font color
